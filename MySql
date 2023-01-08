@@ -1,0 +1,30 @@
+create table employees(employeeId varchar(22),firstName varchar(22),lastName varchar(32),email varchar(32),gender varchar(32),departmentId varchar(32));
+select table_name,schema_name from information_schema.columns where rownum<10;
+select * from  information_schema.tables where table_name='Employees' ;
+select * from employees;
+
+insert into employees value(1,'aaa','sac','a@gmail.com','female',6);
+insert into employees value(2,'bbb','dac','b@gmail.com','male',10);
+insert into employees value(3,'ccc','eac','e@gmail.com','female',11);
+insert into employees value(4,'ddd','fac','g@gmail.com','female',15);
+insert into employees value(5,'eee','eac','f@gmail.com','female',16);
+
+drop table employees;
+create table department(departmentId varchar(22),name varchar(32)); 
+insert into department value(6,'aaa');
+insert into department value(10,'bbb');
+insert into department value(11,'ccc');
+insert into department value(15,'ddd');
+insert into department value(16,'eee');
+
+select * from department;
+drop table department;
+create table salary(employeeId varchar(22),basicsalary varchar(32),allowance varchar(32)); 
+
+insert into salary value(1,20000,2000);
+insert into salary value(2,30000,2000);
+insert into salary value(3,4000,2000);
+insert into salary value(4,50000,2000);
+insert into salary value(5,60000,2000);
+
+select * from salary;
